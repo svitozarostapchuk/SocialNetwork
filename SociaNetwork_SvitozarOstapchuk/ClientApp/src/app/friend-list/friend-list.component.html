@@ -1,0 +1,29 @@
+
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="friends">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Nick</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let friend of friends">
+        <td>{{friend.firstName}}</td>
+        <td>{{friend.lastName}}</td>
+        <td>{{friend.userName}}</td>
+        <td><div>
+          <a [routerLink]="['/friend/profile']">
+              <button class="btn btn-primary" (click)="setId(friend.id)">View friend's profile</button>
+          </a>
+      </div>
+      <div>
+        <a [routerLink]="['/chat']">
+            <button class="btn btn-primary" (click)="setDataForChat(friend.userName)">Chat</button>
+        </a>
+      </div></td>
+      </tr>
+    </tbody>
+  </table>
+ 
+<br> 

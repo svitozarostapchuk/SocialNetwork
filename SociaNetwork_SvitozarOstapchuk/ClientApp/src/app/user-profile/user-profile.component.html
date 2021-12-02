@@ -1,0 +1,36 @@
+<div class="header"> 
+  <div>Your profile</div>
+</div>
+
+<div class="Info">
+  <br>
+    <div>Name: {{user?.firstName}}  {{user?.lastName}}</div>
+    <div>Age: {{user?.age}}</div>
+    <div>About you: {{user?.aboutUser}} </div>
+  <br>
+</div>
+
+<div class="Info">
+  <h5>Contact information:</h5> 
+  <br>
+    <div>Email: {{user?.email}} </div>
+    <div>Phone: {{user?.phoneNumber}}</div>
+  <br>
+</div>
+<div class="Info"> 
+  <h5>City:</h5>
+  <br>
+    <div>{{user?.city}} </div>
+  <br>
+</div>
+<div class="Info"> 
+  <h5>Education:</h5>
+  <br>
+    <div>School:  {{user?.school}} </div>
+    <div>University:  {{user?.university}} </div>
+  <br>
+</div>
+
+<div>
+  <button class="btn btn-primary btn-block"><a routerLink ="/update-profile">Edit profile</a></button>
+</div>
